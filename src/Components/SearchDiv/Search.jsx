@@ -1,0 +1,105 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { AiOutlineSearch } from "react-icons/ai";
+import { BsHouseDoor } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
+
+const Search = () => {
+  return (
+    <div className="searchDiv grid gap-8 rounded-[10px] p-[5rem]">
+      <div className="flex justify-center">
+        {/* Center the white box */}
+        <form action="">
+          <div
+            className="firstDiv flex justify-between items-center rounded-[8px] gap-[10px] bg-greyIsh p-4 shadow-lg shadow-greyIsh-700"
+            style={{ width: "994.29px", height: "76px" }}
+          >
+            <div className="flex gap-2 items-center">
+              <AiOutlineSearch className="text-[25px] icon" />
+              <input
+                type="text"
+                className="bg-transparent text-black-500 focus:outline-none w-[100%]"
+                placeholder="Search for job..."
+              />
+            </div>
+            <div className="flex gap-2 items-center">
+              <BsHouseDoor className="text-[25px] icon" />
+              <input
+                type="text"
+                className="bg-transparent text-black-500 focus:outline-none w-[100%]"
+                placeholder="Search for company..."
+              />
+            </div>
+            <div className="flex gap-2 items-center">
+              <CiLocationOn className="text-[25px] icon" />
+              <input
+                type="text"
+                className="bg-transparent text-black-500 focus:outline-none w-[100%]"
+                placeholder="Search by location..."
+              />
+            </div>
+            <button className="bg-blueColor h-full p-2 px-4 f rounded-[10px] text-white cursor-pointer hover:bg-blue-300">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div className="flex flex-row justify-center gap-10 p-[1rem]">
+        <div className="secDiv flex items-center gap-2">
+          <label htmlFor="relevance" className="text-[#808080] font-semibold">
+            Sort by:
+          </label>
+          <select
+            name=""
+            id="relevance"
+            className="bg-greyIsh rounded-[3px] px-4 py-1"
+          >
+            <option value="">Relevance</option>
+            <option value="">Inclusive</option>
+            <option value="">Starts With</option>
+            <option value="">Contains</option>
+          </select>
+        </div>
+
+        <div className="secDiv flex items-center gap-2">
+          <label htmlFor="Type" className="text-[#808080] font-semibold">
+            Type:
+          </label>
+          <select
+            name=""
+            id="relevance"
+            className="bg-greyIsh rounded-[3px] px-4 py-1"
+          >
+            <option value="">Full-time</option>
+            <option value="">Remote</option>
+            <option value="">Contract</option>
+            <option value="">Part-time</option>
+          </select>
+        </div>
+
+        <div className="secDiv flex items-center gap-2">
+          <label htmlFor="level" className="text-[#808080] font-semibold">
+            Level:
+          </label>
+          <select
+            name=""
+            id="relevance"
+            className="bg-greyIsh rounded-[3px] px-4 py-1"
+          >
+            <option value="">Senior</option>
+            <option value="">Beginner</option>
+            <option value="">Intermediate</option>
+            <option value="">Advocate</option>
+          </select>
+          <div className="secDiv flex items-center gap-2">
+            <span className="text-[#a1a1a1 cursor-pointer]">Clear All</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Search;
+ 
